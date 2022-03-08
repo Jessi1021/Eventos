@@ -1,0 +1,644 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/************************************************* index */
+
+.title h1 {
+    font-size: 10vw;
+    /*vw ancho de la ventana grafica*/
+    text-shadow: 2px 2px;
+    /*sombreado de letra*/
+    position: absolute;
+    /*letra encima*/
+    transform: translate(80%, 70%);
+    /*ubicacion de la letra*/
+}
+
+.title img {
+    max-width: 100%;
+    height: 50%;
+    width: 100%;
+    opacity: 0.7;
+    /* transparencia de imagen*/
+}
+
+.title_P h1 {
+    font-size: 10vw;
+    /*vw ancho de la ventana grafica*/
+    text-shadow: 2px 2px;
+    /*sombreado de letra*/
+    position: absolute;
+    /*letra encima*/
+    transform: translate(20%, 50%);
+    /*ubicacion de la letra*/
+}
+
+.title_P img {
+    max-width: 100%;
+    height: 50%;
+    width: 100%;
+    opacity: 0.7;
+    /* transparencia de imagen*/
+}
+
+.linea {
+    height: 2px;
+    border-width: 0px;
+    color: black;
+    background-color: black;
+}
+
+
+/******************Hamburguesa*/
+
+.my-nav {
+    /**background-color: rgb(218, 169, 167);*/
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    /*  position: absolute;*/
+    width: 100%;
+    height: 80px;
+    z-index: 90;
+    top: 0px;
+}
+
+.nav-menus {
+    /* background-color: blueviolet;*/
+    width: 40%;
+}
+
+.burger-nav {
+    display: none;
+}
+
+.big-nav {
+    text-align: center;
+    bottom: 10px;
+}
+
+.big-nav .options {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+}
+
+
+/***********/
+
+.big-nav .options .option {
+    margin: auto;
+    text-align: center;
+    flex-grow: 1;
+    /*distribuye todo il uniformemente*/
+}
+
+.big-nav .options .option:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+    transition: all 0.3s;
+}
+
+
+/*************************menu lateral */
+
+.nav-lateral {
+    position: fixed;
+    top: 0px;
+    left: -270px;
+    display: block;
+    width: 270px;
+    height: 100vh;
+    background-color: rgb(238, 173, 233);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    z-index: 91;
+    padding: 18px 20px;
+    transition: all 0.5s;
+}
+
+.close-1 {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-lateral h1 {
+    font-family: fuente;
+    font-size: 35px;
+}
+
+.options-lateral {
+    list-style: none;
+    padding: 0px;
+    text-align: left;
+}
+
+.option-1 {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+
+.option-1:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0px 25px;
+    text-decoration: underline;
+    transition: all 0.5s;
+    color: white;
+}
+
+.visible {
+    left: 0px;
+    transition: all 0.5s;
+}
+
+
+/************************* carrucel */
+
+.eventos {
+    display: flex;
+    /* background-color: rgb(210, 30, 75);*/
+    height: 80vh;
+    height: auto;
+}
+
+.video {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    /*  background-color: blueviolet;*/
+}
+
+.video video {
+    max-width: 80%;
+    border-radius: 12px;
+}
+
+.informacion {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    text-align: justify;
+    /* background-color: rgb(0, 255, 13);*/
+    word-wrap: break-word;
+    /* ajusta las palabras */
+    text-indent: 30px;
+    /* tabulacion en la primera linea del texto */
+}
+
+.informacion p,
+h5,
+a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.informacion h3 {
+    text-align: center;
+}
+
+.informacion .dat h5,
+a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.informacion .btn {
+    height: auto;
+}
+
+.datos {
+    text-indent: 2px;
+    /*SAngria*/
+}
+
+.datos ul li {
+    list-style: none;
+    display: inline-flex;
+}
+
+.ubicacion {
+    padding-right: 0px;
+    padding-left: 0px;
+    /*background-color: antiquewhite;*/
+    color: black;
+    border: black;
+    transition-duration: 0.4s;
+    font-size: 25px;
+    margin-top: -30px;
+}
+
+.btn-U {
+    /*  background-color: brown;*/
+    padding: 0;
+}
+
+
+/*************** Botones principales prox y recientes */
+
+.boton {
+    background-color: rgb(166, 236, 241);
+    color: black;
+    padding: 0;
+    padding-top: 3px;
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-bottom: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    transition: 0.8s;
+    text-align: center;
+}
+
+.boton:hover {
+    color: white;
+    background-color: black;
+    transition: 0.8s;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+/***************************** Boton carrucel */
+
+.btn {
+    background-color: rgb(166, 236, 241);
+    color: black;
+    padding: 0;
+    padding-top: 3px;
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-bottom: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    transition: 0.8s;
+    float: right;
+    text-align: center;
+}
+
+.btn:hover {
+    color: white;
+    background-color: black;
+    transition: 0.8s;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+/***************************** Boton tarjeta */
+
+#btn-p {
+    background-color: rgb(166, 236, 241);
+    color: black;
+    padding: 0;
+    padding-top: 3px;
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-bottom: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    transition: 0.8s;
+    text-align: center;
+    float: none;
+}
+
+#btn-p:hover {
+    color: white;
+    background-color: black;
+    transition: 0.8s;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+/***************************************** Proximos eventos */
+
+
+/********************** estilos de tarjetas */
+
+.lienzo {
+    /*background-color: yellow;*/
+    display: flex;
+    flex-wrap: wrap;
+    /*que se bajen de acuerdo a las que quepan*/
+}
+
+.card {
+    /*background-color: purple;*/
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    border: solid 1px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: 0.5s;
+    word-wrap: break-word;
+    /* ajusta las palabras */
+}
+
+.card-img {
+    width: 100%;
+    margin: auto;
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-text {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 10px 10px 0px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    /*lo va a escalar y aumentar el width 300*1.03*/
+    transition: 0.5s;
+}
+
+
+/*********************************** *************MODAL*/
+
+.modal-content {
+    display: none;
+}
+
+.modal-window {
+    position: fixed;
+    /*estatita y sobre*/
+    width: 80%;
+    height: auto;
+    /*80%arriba de la vista*/
+    top: 50%;
+    /*bajar*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*trasladar el punto de origen, superior izq*/
+    background-color: rgb(223, 222, 222);
+    z-index: 2;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+}
+
+.modal-content::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0px;
+    left: 0px;
+    /*pegado a top y left, sin margen*/
+    z-index: 1;
+    /*detras del cuadro*/
+}
+
+.modal-exit {
+    padding: 5px 10px;
+    /*alto, ancho*/
+    border-radius: 5px;
+    color: #fff;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal-text {
+    /*  background-color: chartreuse;*/
+    height: 100%;
+    text-align: center;
+    padding: 15px;
+    /*separa de la imagen, lado izq*/
+}
+
+.modal-title {
+    font-size: 40px;
+    text-align: center;
+    /* background-color: aqua;*/
+}
+
+.modal-descrip {
+    /*   background-color: blueviolet;*/
+    font-size: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-family: Arial;
+    text-align: justify;
+    font-weight: 1.5;
+    text-indent: 30px;
+    /* tabulacion en la primera linea del texto */
+}
+
+
+/* ******************************Formulario */
+
+.for {
+    margin-left: 30px;
+}
+
+.form-registra {
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+    background-color: rgb(234, 174, 252);
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 15%;
+}
+
+.form-titulo {
+    background-color: rgb(167, 237, 255);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    margin-left: -30px;
+}
+
+input {
+    margin-bottom: 5px;
+    /* espacio entre ellos vertical*/
+    padding: 1px;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid rgb(168, 166, 166);
+}
+
+.botonReg {
+    color: black;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-right: 40%;
+}
+
+.botonRes {
+    color: black;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left: -35%;
+    margin-right: -50%;
+}
+
+.botonCan {
+    color: black;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 55%;
+    margin-right: -30%;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 8px;
+    background-color: rgb(235, 233, 233);
+}
+
+
+/*****************logos*/
+
+.logos {
+    width: 15%;
+    margin-left: 86%;
+    margin-top: -65%;
+    position: fixed;
+    float: right;
+}
+
+.logos-funda {
+    width: 60%;
+    height: 35%;
+    padding-top: 15%;
+}
+
+@media(max-width:650px) {
+    /* imagen */
+    .title img {
+        height: 20%;
+    }
+    .title_P img {
+        height: 20%;
+    }
+    .principal {
+        display: block;
+    }
+    .eventos {
+        width: 100%;
+        display: block;
+        height: 100%;
+    }
+    .video,
+    .informacion {
+        display: block;
+        width: 90%;
+    }
+    .informacion {
+        margin-top: 2%;
+        padding: 8%;
+    }
+    .datos ul li {
+        display: inline-block;
+    }
+    .boton {
+        background-color: white;
+        border-radius: 0%;
+        border-style: none;
+    }
+    /* menu hamburguesa */
+    .burger-nav {
+        display: block;
+        font-size: 25px;
+        text-align: center;
+    }
+    .big-nav {
+        display: none;
+    }
+    .nav-menus {
+        width: 20%;
+    }
+    /* Trajetas*/
+    .banner {
+        align-items: center;
+        align-content: center;
+    }
+    .info-box {
+        width: 100%;
+    }
+    .png-box {
+        display: none;
+        /*quita la imagen*/
+    }
+    .card {
+        width: 45%;
+    }
+    .card {
+        /* background-color: aqua;*/
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+        border: solid 1px;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        transition: 0.5s;
+    }
+    /*******Modal*/
+    .modal-title {
+        font-size: 25px;
+    }
+    .modal-descrip {
+        font-size: 70%;
+    }
+    .btn-U {
+        font-size: 12px;
+    }
+    /* formulario */
+    .form-registra {
+        color: aqua;
+        width: 100%;
+        height: 100%;
+    }
+    .padre-form {
+        width: 100%;
+        height: 100px;
+    }
+    .logos {
+        display: none;
+    }
+}
