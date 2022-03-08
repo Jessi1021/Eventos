@@ -1,5 +1,5 @@
 <?php
-  include("php/conexion.php");
+include("php/conexion.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +19,9 @@
         <div class="nav-menus">
             <div class="burger-nav">
                 <input type="checkbox" id="burger-status" hidden>
-                <label for="burger-status"> 
-					<i class="fa-solid fa-bars"> </i>
-				</label>
+                <label for="burger-status">
+                    <i class="fa-solid fa-bars"> </i>
+                </label>
             </div>
         </div>
 
@@ -30,9 +30,9 @@
     <!--menu lateral-->
 
     <div class="nav-lateral" id="nav-lateral">
-        <label for="burger-status" class="close-1"> 
-        <i class="fa fa-times" aria-hidden="true"></i>
-    </label>
+        <label for="burger-status" class="close-1">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </label>
         <h1>Eventos</h1> <br>
 
         <ul class="options-lateral">
@@ -65,20 +65,20 @@
     </div>
 
     <!-- Tarjetas -->
-<?php
-				
-	$consulta = "SELECT * FROM evento ";
-							
-	$datos = mysqli_query ($conexion, $consulta);
-	
-    while ($fila=mysqli_fetch_array($datos)){	
-?>
     <div class="lienzo">
+        <?php
+
+        $consulta = "SELECT * FROM evento ";
+
+        $datos = mysqli_query($conexion, $consulta);
+
+        while ($fila = mysqli_fetch_array($datos)) {
+        ?>
 
         <div class="card">
             <div class="card-text">
                 <h2 class="card-title">
-                <?php echo "$fila[titulo] "?>
+                    <?php echo "$fila[titulo] " ?>
                 </h2>
                 <div class="card-img">
                     <img src="img/evento1.jpeg" width="70px" height="70px">
@@ -86,30 +86,32 @@
                 <button class="btn" id="btn-p">Me interesa</button>
             </div>
         </div>
-
+        <?php
+        }
+        ?>
     </div>
- 
     <!------------------ Modal -->
 
     <div class="modal-content" id="mymodal">
         <div class="modal-window">
             <button class="modal-exit" id="modal-exit">X</button>
             <div class="modal-text">
-                <h1 class="modal-title"><?php echo "$fila[titulo] "?></h1>
+                <h1 class="modal-title"><?php echo "$fila[titulo] " ?></h1>
                 <hr class="linea "> <br>
                 <div class="modal-descrip">
-                    <p><?php echo "$fila[descript] "?> </p>
+                    <p><?php echo "$fila[descript] " ?> </p>
                     <hr class="linea "> <br>
                     <div id="dat ">
                         <div class="datos ">
                             <ul>
                                 <li>
-                                    <h5> Hora: <?php echo "$fila[horario] "?> </h5>
+                                    <h5> Hora: <?php echo "$fila[horario] " ?> </h5>
                                 </li>
                                 <li>
-                                    <h5> Fecha: <?php echo "$fila[fecha_inicio] "?> </h5>
+                                    <h5> Fecha: <?php echo "$fila[fecha_inicio] " ?> </h5>
                                 </li>
-                                <li><a href="https://goo.gl/maps/wLuHyLspqBnC5jr68 " class="btn-U "><b>Ubicación</b></a></li>
+                                <li><a href="https://goo.gl/maps/wLuHyLspqBnC5jr68 " class="btn-U "><b>Ubicación</b></a>
+                                </li>
                             </ul>
 
                             <br>
@@ -121,10 +123,6 @@
             </div>
         </div>
     </div>
-<?php
-}
-?>
-
     <br>
     <hr class="linea ">
     <br>

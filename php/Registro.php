@@ -9,9 +9,9 @@
     $edad      = $_POST["edad"];
     $pais      = $_POST["pais"];
     $ciudad    = $_POST["ciudad"];
-    $si        = $_POST[""];
-    $no        = $_POST["no"];
-    $talvez    = $_POST["talvez"];
+   // $si        = $_POST[""];
+   // $no        = $_POST["no"];
+    //$talvez    = $_POST["talvez"];
     $desc_idea = $_POST["desc_idea"];  
     $tel       = $_POST["tel"];
 /*
@@ -26,11 +26,10 @@ else{
 }*/
 
 $checkbox=$_POST['check'];
-foreach($checkbox as $llave => $valor ){
-    $respuesta = " $valor";
-    
+// foreach($checkbox as $llave => $valor ){
+//     $respuesta = " $valor";
 
-}
+// }
 
 
     ///Verificacion de usuarios ya existentes o no
@@ -45,7 +44,7 @@ $consultaId = mysqli_fetch_array ($consultaId); //fetch = extrae
 if (!$consultaId)
 { //Si la consulta esta vacia, inserta nuevo 
 
-$sql = "INSERT INTO evento_mujeres VALUES ('','$nombre', '$apa','$ama','$gmail','$edad','$pais','$ciudad','$desc_idea','$tel','$respuesta')";
+$sql = "INSERT INTO evento_mujeres VALUES ('','$nombre', '$apa','$ama','$gmail','$edad','$pais','$ciudad','$desc_idea','$tel','$checkbox')";
 
      //Ejecutar las consultas
 if (mysqli_query($conexion, $sql)) 

@@ -40,9 +40,9 @@
         <input type="text" id="ciudad" name="ciudad"  required>
         <br><br>
         <label> ¿Cuentas con alguna idea de negocio? </label>
-        <br><br> Si <input type="radio" id="si" name="check[]" value="si">
-                 No <input type="radio" id="no" name="check[]" value="no"> 
-                 Tal vez <input type="radio" id="talvez" name="check[]" value="talvez">
+        <br><br> Si <input type="radio" id="si" name="check" value="si">
+                 No <input type="radio" id="no" name="check" value="no"> 
+                 Tal vez <input type="radio" id="talvez" name="check" value="talvez">
         <br> <br>
         <label>Si tienes alguna idea de negocio, por favor descríbela</label>
         <br> <br><textarea id="idea" name="desc_idea"  rows="5" cols="41"> </textarea>
