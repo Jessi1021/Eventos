@@ -2,10 +2,15 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+   font-family: Monse;
 }
 
 
 /************************************************* index */
+@font-face {
+    font-family: 'Monse';
+    src: url('../font/Monse.ttf');
+}
 
 .title h1 {
     font-size: 10vw;
@@ -33,7 +38,7 @@
     /*sombreado de letra*/
     position: absolute;
     /*letra encima*/
-    transform: translate(20%, 50%);
+    transform: translate(5%, 30%);
     /*ubicacion de la letra*/
 }
 
@@ -46,7 +51,9 @@
 }
 
 .linea {
-    height: 2px;
+    width: 90%;
+    margin-left: 5%;
+    height: 3px;
     border-width: 0px;
     color: black;
     background-color: black;
@@ -118,7 +125,7 @@
     display: block;
     width: 270px;
     height: 100vh;
-    background-color: rgb(238, 173, 233);
+    background-color: #7DCEF2 ;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     z-index: 91;
     padding: 18px 20px;
@@ -163,30 +170,37 @@
     left: 0px;
     transition: all 0.5s;
 }
+.boton-nav{
+    background-color:#7DCEF2  ;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
 
 /************************* carrucel */
 
 .eventos {
     display: flex;
-    /* background-color: rgb(210, 30, 75);*/
+    /*background-color: rgb(210, 30, 75);*/
     height: 80vh;
-    height: auto;
 }
 
 .video {
     width: 40%;
+    height: 80%;
     margin: auto;
     text-align: center;
-    /*  background-color: blueviolet;*/
+    /*background-color: blueviolet;*/
 }
 
 .video video {
     max-width: 80%;
     border-radius: 12px;
+    height: 100%;
 }
 
 .video img {
+    height: 100%;
     width: 100%;
     object-fit: scale-down;
 }
@@ -196,11 +210,15 @@
     height: auto;
     margin: auto;
     text-align: justify;
-    /* background-color: rgb(0, 255, 13);*/
+    border-style: solid;
+    border-width: 2px;
+    padding-top: 2%;
+    padding-bottom: 2%;
     word-wrap: break-word;
     /* ajusta las palabras */
     text-indent: 30px;
     /* tabulacion en la primera linea del texto */
+    
 }
 
 .informacion p,
@@ -256,38 +274,38 @@ a {
 /*************** Botones principales prox y recientes */
 
 .boton {
-    background-color: rgb(166, 236, 241);
+    background-color:  #3B5998;
     color: black;
     padding: 0;
-    padding-top: 3px;
-    padding-right: 28px;
-    padding-left: 28px;
-    padding-bottom: 3px;
-    border-style: solid;
-    border-width: 1px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
     border-radius: 6px;
     transition: 0.8s;
     text-align: center;
+    font-size: 25px;
 }
 
 .boton:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #34B7F1;
     transition: 0.8s;
     box-shadow: 5px 5px 5px black;
+    text-decoration: none;
 }
 
 
 /***************************** Boton carrucel */
 
 .btn {
-    background-color: rgb(166, 236, 241);
+    background-color: #3B5998;
     color: black;
     padding: 0;
-    padding-top: 3px;
+    padding-top: 8px;
     padding-right: 28px;
     padding-left: 28px;
-    padding-bottom: 3px;
+    padding-bottom: 8px;
     border-style: solid;
     border-width: 1px;
     border-radius: 6px;
@@ -297,8 +315,8 @@ a {
 }
 
 .btn:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #34B7F1;
     transition: 0.8s;
     box-shadow: 5px 5px 5px black;
 }
@@ -307,13 +325,13 @@ a {
 /***************************** Boton tarjeta */
 
 #btn-p {
-    background-color: rgb(166, 236, 241);
+    background-color: #3B5998;
     color: black;
     padding: 0;
-    padding-top: 3px;
+    padding-top: 13px;
     padding-right: 28px;
     padding-left: 28px;
-    padding-bottom: 3px;
+    padding-bottom: 13px;
     border-style: solid;
     border-width: 1px;
     border-radius: 6px;
@@ -323,8 +341,8 @@ a {
 }
 
 #btn-p:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #34B7F1;
     transition: 0.8s;
     box-shadow: 5px 5px 5px black;
 }
@@ -336,7 +354,7 @@ a {
 /********************** estilos de tarjetas */
 
 .lienzo {
-    background-color: yellow;
+    /*background-color: yellow;*/
     display: flex;
     flex-wrap: wrap;
     /*que se bajen de acuerdo a las que quepan*/
@@ -377,6 +395,10 @@ a {
     padding: 10px 10px 10px 0px;
 }
 
+.card video {
+    width: 100%;
+}
+
 .card:hover {
     cursor: pointer;
     transform: scale(1.03);
@@ -407,6 +429,7 @@ a {
     align-items: center;
     padding: 10px;
     display: flex;
+    float: right;
 }
 
 .modal-content::before {
@@ -463,23 +486,30 @@ a {
 
 
 /* ******************************Formulario */
-
+.contenedor-formulario{
+    /*background-color: green;*/
+}
+.padre-form{
+    /*background-color: yellow;*/
+    width: 50%;
+    margin-left: 15%;
+}
 .for {
     margin-left: 30px;
+    width: 100%;
 }
 
 .form-registra {
-    width: 95%;
-    max-width: 500px;
+    width: 100%;
     margin: auto;
-    background-color: rgb(234, 174, 252);
+    background-color: #DFC4FA ;
     border-radius: 7px;
     margin-top: 15px;
-    margin-left: 15%;
 }
 
 .form-titulo {
-    background-color: rgb(167, 237, 255);
+    background-color:  #CDA1FA;
+    width: 100%;
     color: black;
     padding: 20px;
     text-align: center;
@@ -496,6 +526,9 @@ input {
     font-size: 15px;
     border-radius: 3px;
     border: 1px solid rgb(168, 166, 166);
+}
+#idea{
+    width: 70%;
 }
 
 .botonReg {
@@ -535,21 +568,7 @@ input {
 }
 
 
-/*****************logos*/
 
-.logos {
-    width: 15%;
-    margin-left: 86%;
-    margin-top: -65%;
-    position: fixed;
-    float: right;
-}
-
-.logos-funda {
-    width: 60%;
-    height: 35%;
-    padding-top: 15%;
-}
 
 @media(max-width:650px) {
     /* imagen */
@@ -633,17 +652,13 @@ input {
     .btn-U {
         font-size: 12px;
     }
-    /* formulario */
-    .form-registra {
-        color: aqua;
+    /******* formulario */
+    .contenedor-formulario{
+       width: 100%;
+       height: 100%;
+    }
+    .padre-form{
         width: 100%;
         height: 100%;
-    }
-    .padre-form {
-        width: 100%;
-        height: 100px;
-    }
-    .logos {
-        display: none;
     }
 }

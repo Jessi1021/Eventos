@@ -37,9 +37,9 @@ include("php/conexion.php");
         <h1>Eventos</h1> <br>
 
         <ul class="options-lateral">
-            <li class="option-1"> <a href="index.php" class="boton " id="recientes ">Recientes</a>
+            <li class="option-1"> <a href="index.php" class="boton-nav " id="recientes ">Recientes</a>
             </li>
-            <li class="option-1"> <a href="Prox_Ev.php" class="boton " id="prox ">Proximos</a>
+            <li class="option-1"> <a href="Prox_Ev.php" class="boton-nav" id="prox ">Proximos</a>
             </li>
         </ul>
     </div>
@@ -50,8 +50,8 @@ include("php/conexion.php");
     <div class="title">
         <h1> Eventos </h1>
         <img src="img/cortada.jpeg">
-        <hr class="linea ">
-        <br>
+        
+        <br><br><br>
     </div>
 
     <div class="big-nav ">
@@ -65,6 +65,8 @@ include("php/conexion.php");
         </ul>
         <br>
     </div>
+    <br><br><br>
+    <hr class="linea "> <br>
     <!-- carrucel -->
 
     <?php
@@ -94,14 +96,14 @@ include("php/conexion.php");
             <div class="informacion ">
                 <h3> <?php echo "$fila[titulo] " ?> </h3>
                 <br>
-                <hr class="linea ">
+                
                 <h4> Descripcion del evento </h4>
                 <br>
                 <p> <?php
                     $data = explode("*", $fila['descript']);
                     for ($i = 0; $i < count($data); $i++) {
                         if ($i == 1) {
-                            echo "<a href='" . $data[$i] . "' target='_blank'> Temario! </a>";
+                            echo "<a href='" . $data[$i] . "' target='_blank'> Por motivo del 8 de Marzo, te invitamos a participar en la semana de emprendimiento para mujeres <br> <br>¡Pintate de naranaja! <br><br><br> Da click aqui para conocer el temario </a>";
                             break;
                         }
                         echo $data[$i] . "<br>";
@@ -118,20 +120,20 @@ include("php/conexion.php");
                             <li>
                                 <h5> Fecha: <?php echo "$fila[fecha_inicio] " ?> </h5>
                             </li>
-                            <li><a href="https://goo.gl/maps/wLuHyLspqBnC5jr68 " class="btn-U "><b>Ubicación</b></a></li>
+                         <!--   <li><a href="https://goo.gl/maps/wLuHyLspqBnC5jr68 " class="btn-U "><b>Ubicación</b></a></li> -->
                         </ul>
-                        <hr class="linea ">
+                        
                         <br>
-                        <a href="Formulario.php " class="btn " id="registrate "> Registrar</a>
+                        <a href="Formulario.php " class="btn " id="registrate "> Registrar</a> <br>
                     </div>
                 </div>
             </div>
         </div>
+       
     <?php
     }
     ?>
     <br>
-    <hr class="linea ">
     <br>
     <br>
     <br>

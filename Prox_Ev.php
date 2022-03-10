@@ -36,18 +36,19 @@ include("php/conexion.php");
         <h1>Eventos</h1> <br>
 
         <ul class="options-lateral">
-            <li class="option-1"> <a href="index.php " class="boton " id="recientes ">Recientes</a>
+            <li class="option-1"> <a href="index.php " class="boton-nav " id="recientes ">Recientes</a>
             </li>
-            <li class="option-1"> <a href="Prox_Ev.php " class="boton " id="prox ">Proximos</a>
+            <li class="option-1"> <a href="Prox_Ev.php " class="boton-nav " id="prox ">Proximos</a>
             </li>
         </ul>
     </div>
+
     <!-- Titulo e imagen -->
     <div class="title_P">
         <h1> Próximos Eventos </h1>
         <img src="img/p_cortada.jpeg">
-        <hr class="linea ">
-        <br>
+        
+        <br><br><br><br>
     </div>
 
     <!-- botones -->
@@ -61,8 +62,9 @@ include("php/conexion.php");
                 <a href="Prox_Ev.php " class="boton " id="prox ">Proximos</a>
             </li>
         </ul>
-        <br>
+        <br><br><br>
     </div>
+    <hr class="linea "> <br>
 
     <!-- Tarjetas -->
     <div class="lienzo">
@@ -81,7 +83,19 @@ include("php/conexion.php");
                     <?php echo "$fila[titulo] " ?>
                 </h2>
                 <div class="card-img">
-                    <img src="img/evento1.jpeg" width="70px" height="70px">
+                <?php
+                $data = explode("*", $fila['foto']);
+                if ($data[0] == "i") {
+                ?>
+                    <img src="img/<?php echo $data[1] ;  ?>" alt="">
+                <?php
+                } else {
+                ?>
+                    <video controls>
+                        <source src="videos/<?php echo $data[1]; ?> ">
+                    </video>
+
+                <?php } ?>                
                 </div><br>
                 <button class="btn" id="btn-p">Me interesa</button>
             </div>
@@ -92,15 +106,36 @@ include("php/conexion.php");
     </div>
     <!------------------ Modal -->
 
+    
+ <?php
+
+                    $consulta = "SELECT * FROM evento ";
+
+                    $datos = mysqli_query($conexion, $consulta);
+
+                    while ($fila = mysqli_fetch_array($datos)) {
+                ?>
     <div class="modal-content" id="mymodal">
         <div class="modal-window">
             <button class="modal-exit" id="modal-exit">X</button>
             <div class="modal-text">
+               
                 <h1 class="modal-title"><?php echo "$fila[titulo] " ?></h1>
-                <hr class="linea "> <br>
+                <br><br>
                 <div class="modal-descrip">
-                    <p><?php echo "$fila[descript] " ?> </p>
-                    <hr class="linea "> <br>
+
+                    <p><?php
+                    $data = explode("*", $fila['descript']);
+                    for ($i = 0; $i < count($data); $i++) {
+                        if ($i == 1) {
+                            echo "<a href='" . $data[$i] . "' target='_blank'> Por motivo del 8 de Marzo, te invitamos a participar en la semana de emprendimiento para mujeres <br> <br>¡Pintate de naranaja! <br><br><br> Da click aqui para conocer el temario </a>";
+                            break;
+                        }
+                        echo $data[$i] . "<br>";
+                    }
+                    ?> </p>
+                    
+                    <br> <br>
                     <div id="dat ">
                         <div class="datos ">
                             <ul>
@@ -110,21 +145,24 @@ include("php/conexion.php");
                                 <li>
                                     <h5> Fecha: <?php echo "$fila[fecha_inicio] " ?> </h5>
                                 </li>
-                                <li><a href="https://goo.gl/maps/wLuHyLspqBnC5jr68 " class="btn-U "><b>Ubicación</b></a>
-                                </li>
+                              <!--  <li><a href="https://goo.gl/maps/wLuHyLspqBnC5jr68 " class="btn-U "><b>Ubicación</b></a>
+                                </li>-->
                             </ul>
-
                             <br>
                             <a href="Formulario.php" class="btn " id="registrate "> Registrar</a>
                             <br>
                         </div>
                     </div>
                 </div>
+                  
             </div>
         </div>
     </div>
+<?php } ?> 
+        
+       
     <br>
-    <hr class="linea ">
+    <hr class="linea">
     <br>
 
     <!--Script-->
